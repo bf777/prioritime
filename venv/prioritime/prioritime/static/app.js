@@ -1,0 +1,23 @@
+jQuery(function($) {
+
+    $('.field-input').focus(function() {
+        $(this).parent().addClass('is-focused has-label');
+    });
+
+
+    $('.field-input').blur(function() {
+        $parent = $(this).parent();
+        if ($(this).val() == '') {
+            $parent.removeClass('has-label');
+        }
+        $parent.removeClass('is-focused');
+    });
+
+
+    $('.field-input').each(function() {
+        if ($(this).val() != '') {
+            $(this).parent().addClass('has-label');
+        }
+    });
+
+})

@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width. initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Prioritime</title>
-
-    <link rel="stylesheet" href="static/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="static/styleV4.css">
 </head>
 
 <body>
@@ -96,28 +98,54 @@
             </div>
         </div>
     </section>
+    <div class="margin"> </div>
     <div class="pimg4">
-      <center>
-      <div class="form-style">
-      <form action ="{{ url_for('addrec') }}" method="post">
-        Year level:<br>
-        <input type="text" name="yearlevel">
-        <br>
-        Course number:<br>
-        <input type="text" name="courseno">
-        <br>
-        Course name:<br>
-        <input type="text" name="coursename"><br>
-        Which days?:<br>
-        <input type="text" name="whichdays"><br>
-        Class length:<br>
-        <input type="text" name="classlength"><br>
-        <input type="submit" />
-      </form>
-        </div>
-      </div>
-    </center>
+
+        <section class="section section-light">
+            <div class="container">
+                <center>
+                    <h2>Just Type In Your Courses</h2>
+                    <h3>And we'll do the rest
+                    </h3>
+                </center>
+            </div>
+
+
+            <form action="{{ url_for('addrec') }}" method="post">
+                <div class="field">
+                    <label for="form" class="field-label">Year Level :</label>
+                    <input type="text" id="form" name="yearlevel" class="field-input">
+                </div>
+
+                <div class="field">
+                    <label for="form" class="field-label">Course Number : </label>
+                    <input type="text" id="form" name="courseno" class="field-input">
+                </div>
+
+                <div class="field">
+                    <label for="form" class="field-label">Course Name : </label>
+                    <input type="text" id="form" name="coursename" class="field-input">
+                </div>
+
+                <div class="field">
+                    <label for="form" class="field-label">Which days ? </label>
+                    <input type="text" id="form" name="whichdays" class="field-input">
+                </div>
+
+                <div class="field">
+                    <label for="form" class="field-label">Class Length : </label>
+                    <input type="text" id="form" name="classlength" class="field-input">
+                </div>
+
+                <input type="submit" />
+            </form>
+
     </div>
+
+    </section>
+
+    </div>
+
 
     <section class="section-light" id="faces">
         <div class="container">

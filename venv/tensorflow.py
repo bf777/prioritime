@@ -66,6 +66,7 @@ Xtry['Course Number'] = cnumber2
 from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.preprocessing import StandardScaler
 from sql_query import data1
+inputdata = data1
 ss = StandardScaler()
 ss.fit(X_train2)
 

@@ -42,7 +42,7 @@ def initdb_command():
 
 @app.route('/')
 def home():
-   return render_template('main.html')
+   return render_template('mainV4.html')
 
 @app.route('/addrec',methods = ['POST', 'GET'])
 def addrec():
@@ -64,7 +64,7 @@ def addrec():
             msg = "Record successfully added"
       except:
          msg = "error in insert operation"
-      return render_template('main.html')
+      return render_template('mainV4.html')
 
 @app.teardown_appcontext
 def close_db(error):
