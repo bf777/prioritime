@@ -1,4 +1,5 @@
 import os
+import logging
 import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
@@ -53,16 +54,16 @@ def addrec():
          wd = request.form['whichdays']
          cl = request.form['classlength']
 
-
-         with sql.connect("database.db") as con:
+         with sqlite3.connect("database.db") as con:
+            app.logger.info(con)
             cur = con.cursor()
 
-            cur.execute("INSERT INTO courses_table (yearlevel,courseno,coursename,whichdays,classlength) VALUES (?,?,?,?)",(yearlevel,courseno,coursename,whichdays,classlength) )
+            cur.execute("INSERT INTO courses_table (yearlevel,courseno,coursename,whichdays,classlength) VALUES (?,?,?,?,?)",(yl,cno,cna,wd,cl) )
 
             con.commit()
             msg = "Record successfully added"
       except:
-         con.rollback()
+
          msg = "error in insert operation"
 
 @app.teardown_appcontext

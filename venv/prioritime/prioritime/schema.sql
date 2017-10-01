@@ -1,6 +1,7 @@
-drop table if exists courses_table;
 create table courses_table (
   id integer primary key autoincrement,
-  title text not null,
-  'text' text not null
-);
+  'yearlevel' integer not null,
+  'courseno' integer not null,
+  'coursename' text not null,
+  'whichdays' text not null,
+  'classlength' integer not null);
