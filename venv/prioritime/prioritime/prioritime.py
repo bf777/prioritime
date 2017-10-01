@@ -63,8 +63,8 @@ def addrec():
             con.commit()
             msg = "Record successfully added"
       except:
-
          msg = "error in insert operation"
+      return render_template('mainV2.html')
 
 @app.teardown_appcontext
 def close_db(error):
