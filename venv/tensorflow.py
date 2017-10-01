@@ -7,6 +7,7 @@ from IPython.display import display
 from PIL import Image
 
 
+
 tdata = pd.read_csv('appendix.csv')
 
 tdata.head()
@@ -64,6 +65,7 @@ Xtry['Course Number'] = cnumber2
 
 from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.preprocessing import StandardScaler
+from sql_query import data1
 ss = StandardScaler()
 ss.fit(X_train2)
 
@@ -97,8 +99,8 @@ def fetch_batch(epoch, batch_index, batch_size):
         X_batch = X_final[i: i +100]
         y_batch = y_train2[i: i + 100]
     return X_batch, y_batch
-    
-    
+
+
 batch_size = 100
 n_batches = int(np.ceil(m/batch_size))
 n_batches
