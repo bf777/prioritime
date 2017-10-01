@@ -1,0 +1,144 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Leto", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #CDC8C8;
+}
+
+
+/*
+    for images,
+    fixed = parallax;
+    scroll = normal;
+    */
+
+.pimg1 {
+    position: relative;
+    background-image: url('./img/img1.jpeg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg1 img {
+    opacity: 0.5 !important
+}
+
+.pimg2 {
+    background-image: url('./img/img2.jpeg');
+    min-height: 400px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg3 {
+    background-image: url('./img/img3.jpeg');
+    min-height: 500px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg4 {
+    background-image: url('./img/img4.jpeg');
+    min-height: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #BEB2B2;
+    color: #623A3A;
+}
+
+.section-dark {
+    background-color: #2B2828;
+    color: #D6C7C7;
+}
+
+.logo {
+    width: 100%;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.underText {
+    font-family: 'Lucida Handwriting';
+    text-shadow: black;
+    text-align: center;
+    font-size: 25px;
+    font-weight: strong;
+    color: #C41F1F;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/*Boxes*/
+
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#boxes .box img {
+    width: 150px;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #232121;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    float: center;
+    opacity: 0.7;
+    background-color: #651212;
+    color: white;
+    padding: 2px;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #DDB7B7;
+    background-color: #7E5858;
+    text-align: center;
+}
