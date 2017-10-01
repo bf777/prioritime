@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width. initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prioritime</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="static/styleFINAL.css">
+</head>
+
+<body>
+    <div class="pimg1">
+        <div class="logo">
+            <br><br><br><br><br><br>
+            <img src="http://imageshack.com/a/img923/7441/G7WdO3.gif">
+            <div class="underText">Optimize your learning schedule</div>
+        </div>
+    </div>
+
+    <section class="section section-light">
+        <h2>Project Description</h2>
+        <p>Prioritime is a web-based platform that enables users to intuitively organize their tasks that need to be completed for the day, based on the ability to import their google calendar data as well as integrating with their university learning platform,
+            to be able to help individuals make better use of their time and make smarter decisions that is tailored to their current academic process in school.
+        </p>
+    </section>
+
+    <div class="pimg2">
+        <div class="ptext">
+            <span class="border">
+                    Be consistent</span>
+
+            <span class="border">
+                     Be persistent</span>
+
+            <span class="border">
+                     Be outstanding</span>
+        </div>
+    </div>
+    <section class="section section-dark">
+
+        <h2>Designed For Students</h2>
+        <p> We realized that one of the biggest headaches for students is figuring out what their priorities should be - whether it be working on a group project, or which course to study for first. Poor time management and planning results in bad grades,
+            which is very discouraging and frustrating. With Prioritime, the system would be able to suggest activities based on machine learning algorithms on what to do first, based on the course number, the year of study, length of each class, and
+            the frequency. The integration with google calendars will also extract personal tasks and appointments, and will suggest to the user what to focus on first on that specific day.
+            <br> <br>
+        </p>
+    </section>
+
+    <div class="margin"> </div>
+    <section class="section section-dark">
+
+        <h2> Why Prioritime? </h2>
+        <p>
+            <center><i>“It does not do well to leave a live dragon out of your calculations, if you live near one”
+                    <br>                                                                          – The Hobbit</i>
+            </center>
+        </p>
+        <p> Exams, Assignments, Personal commitments. With a forward thinking mindset, PrioriTime will help you tackle each task efficiently and effectively. Optimize your schedule to let you relax and focus on the tasks themselves. Whether it be figuring
+            out time for assignments, tests, out of class activities, or friends, PrioriTime will help you figure out the best routine for you, according to your needs. Don’t just do them in time, crush them. </p>
+
+    </section>
+
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border">Relax</span>
+
+            <span class="border">Breathe</span>
+            <span class="border">Prioritize</span>
+        </div>
+    </div>
+
+    <section class="section-dark" id="boxes">
+        <div class="container">
+            <h1>
+                <center>Pain Points</center>
+            </h1>
+            <hr> <br> <br><br>
+            <div class="box">
+                <img src="http://imageshack.com/a/img922/3307/yTqLJH.png">
+                <h3>Lack of Transparency</h3>
+                <p>Instructors sometimes do not give a full overview of how students are progressing in their courses, and grade transparency is something that is lacking for many school systems. Students are not able to know their grades til the end of
+                    the term
+                </p>
+            </div>
+            <div class="box">
+                <img src="http://imageshack.com/a/img924/9003/bZKbRa.png">
+                <h3>Progress Tracking</h3>
+                <p>
+                    When working on a project, students lack the tools to be able to track their progress when working with a team, as many tasks are dispersed across different people. Prioritime allows individual tracking so that students can focus on what they can complete,
+                    on time.
+                </p>
+            </div>
+            <div class="box">
+                <img src="http://imageshack.com/a/img922/2629/8sn4mX.png">
+                <h3>Uncertainty</h3>
+                <p>School isn’t everything, which is why Prioritime integrates with google calendar to extract non-school tasks and data as well. Prioritime will be able to give reminders on upcoming appointments and whether they will collide with project
+                    due dates, and give suggestions on which projects to complete first to give users room to breathe</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="margin"> </div>
+
+
+
+
+
+    <div class="margin"> </div>
+
+
+    <section class="section section-light">
+        <div class="pimg4">
+            <div class="container">
+                <center>
+                    <h2>Just Type In Your Courses</h2>
+                    <h3>And we'll do the rest
+                    </h3>
+                </center>
+            </div>
+
+
+            <form action="{{ url_for('addrec') }}" method="post">
+                <div class="field">
+                    <label for="form" class="field-label">Year Level :</label>
+                    <input type="text" id="form" name="yearlevel" class="field-input">
+                </div>
+
+                <div class="field">
+                    <label for="form" class="field-label">Course Number : </label>
+                    <input type="text" id="form" name="courseno" class="field-input">
+                </div>
+
+                <div class="field">
+                    <label for="form" class="field-label">Course Name : </label>
+                    <input type="text" id="form" name="coursename" class="field-input">
+                </div>
+
+                <div class="field">
+                    <label for="form" class="field-label">Which days ? </label>
+                    <input type="text" id="form" name="whichdays" class="field-input">
+                </div>
+
+                <div class="field">
+                    <label for="form" class="field-label">Class Length : </label>
+                    <input type="text" id="form" name="classlength" class="field-input">
+                </div>
+
+                <input type="submit" />
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+
+    <div class="margin"></div>
+
+
+    <div class="pimg9">
+        <div class="ptext">
+            <section class="section section-dark">
+
+                <h2>Lightbox : MockBox</h2>
+                <hr>
+                <div class="row">
+                    <div class="column">
+                        <img src="./img/ptm1.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="./img/ptm2.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="./img/ptm3.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="./img/ptm4.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                    </div>
+                </div>
+
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="./img/ptm1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="./img/ptm2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="./img/ptm3.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="./img/ptm4.png" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+
+                        <div class="column">
+                            <img class="demo cursor" src="./img/ptm1.png" style="width:100%" onclick="currentSlide(1)" alt="Mock Result 1">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./img/ptm2.png" style="width:100%" onclick="currentSlide(2)" alt="Mock Result 2">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./img/ptm3.png" style="width:100%" onclick="currentSlide(3)" alt="Mock Result 3">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./img/ptm4.png" style="width:100%" onclick="currentSlide(4)" alt="Mock Result 4">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+
+    <section class="section-light" id="faces">
+        <div class="container">
+            <center>
+                <h1> Meet the Geeks</h1>
+            </center>
+
+            <hr>
+            <div class="face">
+                <img src="http://imageshack.com/a/img924/5355/eJarKa.png">
+                <h3>Brandon</h3>
+            </div>
+            <div class="face">
+                <img src="http://imageshack.com/a/img923/269/CaOFij.png">
+                <h3>Shamit</h3>
+            </div>
+            <div class="face">
+                <img src="http://imageshack.com/a/img922/6143/ohbJal.png">
+                <h3>Zarrin</h3>
+            </div>
+            <div class="face">
+                <img src="http://imageshack.com/a/img922/3351/pEQh0E.png">
+                <h3>Pablo</h3>
+            </div>
+            <div class="face">
+                <img src="http://imageshack.com/a/img923/2495/MpPKUw.png">
+                <h3>Dani</h3>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>EduHacks 2017, Project Prioritim &copy; 2017</p>
+        <div class="small-text">
+            Stock images courtesy of<a href="https://www.pexels.com/"> pexels.com</a><br> Parallax CSS theme inspired from <a href="http://www.traversymedia.com/"> Traversy Media</a> <br> LightBox inspired from <a href="https://www.w3schools.com/">w3schools.com</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
