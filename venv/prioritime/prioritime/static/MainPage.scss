@@ -1,4 +1,3 @@
-body,
 html {
     height: 100%;
     margin: 0;
@@ -196,6 +195,9 @@ html {
 .field input#form {
     text-align: -webkit-center;
     bottom: -27px;
+}
+.field input#form .margin-top{
+  margin-top: -10px;
 }
 
 .field-input {
